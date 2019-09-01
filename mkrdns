@@ -930,7 +930,11 @@ sub Handle_GENERATE {
     $_ = "$LHS $RHS";
 
     # The only $'s left in the string should be iterator values.
+<<<<<<< HEAD
     s@\$\{([^}]+)}@
+=======
+    s@\$[{]([^}]+)}@
+>>>>>>> a3227b5... Fixed unescaped left brace in regex to be compatible with Perl 5.30+
 			my($o,$w,$r) = split(/,/,$1);
 			sprintf "%0$w$r", $IT+$o;
 		@ge;
